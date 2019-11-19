@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: housecaper-rag
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://10.211.55.13:3306/house_caper
+    hikari:
+      maximum-pool-size: 15
+      minimum-idle: 5
+      username: root
+      password: root123456
+  jackson:
+    time-zone: GMT+8
+    locale: zh_CN
+    parser:
+      allow-missing-values: true
+      allow-backslash-escaping-any-character: true
+      allow-unquoted-field-names: true
+      allow-unquoted-control-chars: true
+      allow-single-quotes: true
+    serialization:
+      fail-on-unwrapped-type-identifiers: true
+      write-null-map-values: false
+      order-map-entries-by-keys: false
+      write-single-elem-arrays-unwrapped: false
+      eager-serializer-fetch: true
+
+server:
+  port: 9091
+  servlet:
+    context-path: /house-caper
+
+
+logging:
+  level:
+    org:
+      housecaper: warn
