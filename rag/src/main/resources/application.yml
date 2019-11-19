@@ -10,6 +10,9 @@ spring:
       minimum-idle: 5
       username: root
       password: root123456
+  jpa:
+    hibernate:
+      ddl-auto: update
   jackson:
     time-zone: GMT+8
     locale: zh_CN
