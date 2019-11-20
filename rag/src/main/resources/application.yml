@@ -12,7 +12,7 @@ spring:
       password: root123456
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: none
   jackson:
     time-zone: GMT+8
     locale: zh_CN
@@ -28,6 +28,9 @@ spring:
       order-map-entries-by-keys: false
       write-single-elem-arrays-unwrapped: false
       eager-serializer-fetch: true
+  data:
+    mongodb:
+      uri: mongodb://10.211.55.13:27017/house_db
 
 server:
   port: 9091
