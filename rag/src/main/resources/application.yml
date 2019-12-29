@@ -12,7 +12,7 @@ spring:
       password: root123456
   jpa:
     hibernate:
-      ddl-auto: none
+      ddl-auto: update
   jackson:
     time-zone: GMT+8
     locale: zh_CN
